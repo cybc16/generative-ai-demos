@@ -24,7 +24,8 @@ from langchain_community.document_loaders import PyPDFLoader
 ## import FAISS
 from langchain_community.vectorstores import FAISS
 
-bedrock_client = boto3.client(service_name="bedrock-runtime")
+session = boto3.Session(profile_name='us-west-2')
+bedrock_client = session.client(service_name="bedrock-runtime")
 bedrock_embeddings = BedrockEmbeddings(model_id="amazon.titan-embed-text-v1", client=bedrock_client)
 
 folder_path="/tmp/"

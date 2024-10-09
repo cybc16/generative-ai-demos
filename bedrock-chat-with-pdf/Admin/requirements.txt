@@ -1,5 +1,8 @@
 streamlit
 pypdf
 langchain
+langchain-community
+langchain-core
+langchain-aws
 faiss-cpu
 boto3

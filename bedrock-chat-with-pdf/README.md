@@ -57,3 +57,14 @@ In this hands-on tutorial, we will demonstrate the following:
 I have created a Youtube video for this tutorials with step-by-step hands-on coding.
 
 [![Chat With PDF - Generative AI Application](https://i9.ytimg.com/vi/KFibP7KnDVM/mqdefault.jpg?v=66342224&sqp=CKzU0LEG&rs=AOn4CLASIjZrAdMHdLjZjWOnwM4a7gvQnA)](https://www.youtube.com/watch?v=KFibP7KnDVM)
+
+
+
+benny-demo-bedrock-chat
+
+docker build -t pdf-reader-admin .
+docker run -e BUCKET_NAME=benny-demo-bedrock-chat -v ~/.aws:/root/.aws -p 8083:8083 -it pdf-reader-admin
+
+
+docker build -t pdf-reader-client .
+docker run -e BUCKET_NAME=benny-demo-bedrock-chat -v ~/.aws:/root/.aws -p 8084:8084 -it pdf-reader-client
